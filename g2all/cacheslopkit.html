@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html manifest="slopkit.manifest">
+<head>
+<title>مكتب احمد جاسم</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+body {
+min-height: 100vh;
+    background-image: url('../splash.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+}
+</style>
+</head><body>
+<script>
+history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="جارٍ تثبيت ذاكرة التخزين المؤقت دون اتصال بالإنترنت: " + Percent + "%";}
+function DisplayCacheProgress(){window.msgs.innerHTML="تم تثبيت ذاكرة التخزين المؤقت بنجاح. ✔";setTimeout(function(){window.msgs.innerHTML="الآن أغلق المتصفح وأعد فتحه...";},1500);}
+window.applicationCache.addEventListener("progress",DLProgress,false);
+window.applicationCache.oncached=function(e){DisplayCacheProgress();};
+window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+window.applicationCache.onerror=function(e){window.msgs.innerHTML="Error Installing Cache! - Clear and Re-Open Your Browser ...";};
+</script>
+<h1>مكتب احمد جاسم<br>07711013600<br>07735884550</h1>
+
+<br>
+<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">جارٍ تثبيت ذاكرة التخزين المؤقت ...</h1>
+<h1 style="margin-top: 43px;"></h1>
+</body>
+</html>

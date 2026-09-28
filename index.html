@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AJ PS4 HOST</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    text-align: center;
+    background-image: url('splash.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 90% auto;
+    background-attachment: fixed;
+}
+
+#menu {
+    display: block;
+    padding-top: 65vh;
+}
+
+#social {
+    display: none;
+    padding-top: 100px;
+}
+
+.main-btn,
+.social-btn {
+    display: block;
+    width: 468px;
+    max-width: 92%;
+    min-height: 55px;
+    margin: 12px auto;
+    font-size: 18px;
+}
+
+.qr {
+    width: 300px;
+    max-width: 85%;
+    margin: 20px auto;
+}
+
+.back-btn {
+    width: 180px;
+    min-height: 45px;
+    font-size: 17px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="menu">
+
+    <button class="btn main-btn"
+        onclick="location.replace('g2all/index.html')">
+        تفعيل GoldHEN لنظام 13.02 - 13.52
+    </button>
+
+    <button class="btn btn-onln social-btn"
+        onclick="showSocial()">
+        اضغط هنا لمتابعة صفحاتي على مواقع التواصل الاجتماعي
+    </button>
+
+</div>
+
+<div id="social">
+
+    <h1 style="font-size:22px;">صفحات التواصل الاجتماعي</h1>
+
+    <img src="qr.png"
+         class="qr"
+         alt="QR Code"
+         onerror="this.style.display='none';">
+
+    <br>
+
+    <button class="btn back-btn" onclick="loadMenu()">
+        رجوع
+    </button>
+
+</div>
+
+<script>
+function showSocial() {
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("social").style.display = "block";
+}
+
+function loadMenu() {
+    document.getElementById("social").style.display = "none";
+    document.getElementById("menu").style.display = "block";
+}
+</script>
+
+</body>
+</html>
