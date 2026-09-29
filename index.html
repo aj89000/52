@@ -30,7 +30,14 @@ body {
 
 #social {
     display: none;
-    padding-top: 100px;
+    position: fixed;
+    inset: 0;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    background: #000;
+    text-align: center;
+    z-index: 10;
 }
 
 .main-btn,
@@ -43,10 +50,11 @@ body {
     font-size: 18px;
 }
 
-.qr {
-    width: 300px;
-    max-width: 85%;
-    margin: 20px auto;
+#social .qr {
+    width: 240px;
+    max-width: 75vw;
+    margin: 12px auto;
+    display: block;
 }
 
 .back-btn {
@@ -77,10 +85,15 @@ body {
 
     <h1 style="font-size:22px;">صفحات التواصل الاجتماعي</h1>
 
-    <img src="qr.png"
-         class="qr"
-         alt="QR Code"
-         onerror="this.style.display='none';">
+    <div>
+        <div>??????</div>
+        <img src="whatsapp-qr.png" class="qr" alt="WhatsApp QR Code">
+    </div>
+
+    <div>
+        <div>??? ???</div>
+        <img src="tiktok-qr.png" class="qr" alt="TikTok QR Code">
+    </div>
 
     <br>
 
